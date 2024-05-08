@@ -1,9 +1,4 @@
-function squareDigits(num) {
-  return parseInt(
-    num
-      .toString()
-      .split("")
-      .map((digit) => digit ** 2)
-      .join(""),
-  );
+function maxDepth(root) {
+  if (!root) return 0;
+  return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
 }
